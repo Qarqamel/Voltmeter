@@ -1,8 +1,7 @@
 #include <Wire.h>
-
 #include <MCP4725.h>
 
-MCP4725 DAC(0x60);
+MCP4725 dac(0x60);
 
 void setup() {
   Serial.begin(115200);
@@ -10,14 +9,7 @@ void setup() {
   //Serial.println("Hello!");
 
   Wire.begin();
-  DAC.begin();
-
-  if(DAC.isConnected()){
-    Serial.println("DAC connected");
-  }
-  else{
-    Serial.println("Error");
-  }
+  dac.begin();
 }
 
 void loop() {
@@ -29,6 +21,6 @@ void loop() {
   }
   else{
     Serial.println("Value set");
-    DAC.setValue(val);
+    dac.setValue(val);
   }
 }
