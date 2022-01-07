@@ -8,7 +8,7 @@ MCP342x adc = MCP342x(address);
 MCP4725 dac(0x60);
 
 void setup() {
-  Serial.begin(115200);
+  Serial.begin(9600);
   Serial.setTimeout(-1);
   Wire.begin();
 

@@ -5,7 +5,7 @@ uint8_t address = 0x68;
 MCP342x adc = MCP342x(address);
 
 void setup() {
-  Serial.begin(115200);
+  Serial.begin(9600);
   Serial.setTimeout(-1);
   Wire.begin();
 

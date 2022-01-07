@@ -4,7 +4,7 @@
 MCP4725 dac(0x60);
 
 void setup() {
-  Serial.begin(115200);
+  Serial.begin(9600);
   Serial.setTimeout(-1);
   //Serial.println("Hello!");
 
@@ -13,7 +13,6 @@ void setup() {
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
   unsigned int val = Serial.readStringUntil('\n').toInt();
 
   if(val > 4095 || val<0){
