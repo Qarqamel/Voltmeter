@@ -40,7 +40,7 @@ void loop() {
   MCP342x::Config stat;
 
   uint8_t error = adc.convertAndRead(MCP342x::channel1, MCP342x::oneShot,
-                                     MCP342x::resolution18, MCP342x::gain1,
+                                     MCP342x::resolution16, MCP342x::gain1,
                                      1000000, value, stat);
   if(error){
     Serial.println(error);
