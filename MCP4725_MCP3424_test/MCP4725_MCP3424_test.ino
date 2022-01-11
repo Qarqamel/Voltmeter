@@ -32,7 +32,6 @@ void loop() {
     Serial.println("Wrong value");
   }
   else{
-    Serial.println("Value set");
     dac.setValue(val);
   }
 
