@@ -8,6 +8,7 @@ HELP = "ch: set channel\n"\
 from mcp3424 import MCP3424
 from display import Display
 import machine
+import time
 
 sda=machine.Pin(20)
 scl=machine.Pin(21)
@@ -43,6 +44,7 @@ while True:
 #                 adc.set_channel(i)
 #                 reads.append(adc.read())
 #             display.show_adc_cnt(reads)
+#             time.sleep(1)
     elif tokens[0] == 'h':
         print(HELP)
     else:
