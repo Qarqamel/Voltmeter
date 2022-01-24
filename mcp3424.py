@@ -22,7 +22,7 @@ class MCP3424:
     def read_raw(self):
         return self._Channels[self._ch_nr].raw_read()[0]
     
-    def read(self):
+    def read_vol(self):
         return self.read_raw()*self._callib_coef[self._ch_nr].get()
     
     def callib(self, measured_mili):
