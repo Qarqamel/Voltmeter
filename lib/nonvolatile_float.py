@@ -5,7 +5,7 @@ class nonvolatile_float:
     def __init__(self):
         global nonvolatile_float_obj_ctr
         
-        self._filename = f"nonvolatile_float_{nonvolatile_float_obj_ctr}.txt"
+        self._filename = f"../nv/nvf_{nonvolatile_float_obj_ctr}.txt"
         try:
             with open(self._filename, "r") as file:
                 self._data = float(file.read())
