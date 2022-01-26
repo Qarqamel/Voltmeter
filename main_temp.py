@@ -27,20 +27,23 @@ display = Display(i2c)
 while True:  
     
     command = input("Give command:")
-    
+#     command = 'cnt'
     tokens = command.split()
-    
-    if tokens[0] == 'm':
-        print(f"{max31865.temperature}")
-        display.show_temp(max31865.temperature)
-#     elif tokens[0] == 'cnt':
-#         while True:
-#             print(f"{max31865.temperature}")
-#             display.show_temp(max31865.temperature)
-#             time.sleep(1)
-    elif tokens[0] == 'h':
-        print(HELP)
-    else:
-        print(HELP)
+    try:
+        if tokens[0] == 'm':
+            x = 12/0
+            print(f"{max31865.temperature}")
+            display.show_temp(max31865.temperature)
+        elif tokens[0] == 'cnt':
+            while True:
+                print(f"{max31865.temperature}")
+                display.show_temp(max31865.temperature)
+                time.sleep(1)
+        elif tokens[0] == 'h':
+            print(HELP)
+        else:
+            print(HELP)
+    except:
+        print('exception')
         
         
